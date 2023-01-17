@@ -14,14 +14,10 @@ function App() {
   return (
     <Router>
     <Routes>
-    
     <Route path='/Login' element={<Loginpage/>}></Route>
     <Route path='/Home' element={<Home/>}></Route>
     </Routes>
     </Router> 
-      
-    
-    
   );
 }
 
