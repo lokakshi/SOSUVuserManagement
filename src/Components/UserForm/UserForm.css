@@ -1,16 +1,15 @@
 .userForm {
-    width: 80%;
-    height: 750px;
+    width: 50%;
+    height: 70%;
     margin: 0 auto;
     padding:20px;
-    border: 1px solid #ccc;
     border-radius: 0px;
    
   }
   
   label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 18px;
   }
   
