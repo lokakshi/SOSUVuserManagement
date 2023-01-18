@@ -3,6 +3,7 @@ import './App.css';
 import { Loginpage } from './Components/LoginPage/Loginpage';
 import { TopBar } from './Components/TopBar/TopBar';
 import { Home } from './Components/Home/Home';
+import UserPage from './Components/User/UserPage';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +17,7 @@ function App() {
     <Routes>
     <Route path='/Login' element={<Loginpage/>}></Route>
     <Route path='/Home' element={<Home/>}></Route>
+    <Route path='/User' element={<UserPage/>}></Route>
     </Routes>
     </Router> 
   );

@@ -32,7 +32,12 @@ export const Loginpage = () => {
       </label>
       <br />
       <input type="submit" value="Login" />
+      
+      <button className="guest-button" onClick={() =>navigate('/User')}>
+       Guest User
+      </button>
     </form>
+   
     
     </>
   )
