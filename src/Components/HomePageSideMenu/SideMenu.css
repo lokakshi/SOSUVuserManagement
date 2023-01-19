@@ -1,0 +1,30 @@
+.side-menu {
+    /* add any styles for the overall side menu container */
+    width: 100%;
+    padding: 10px;
+   
+  }
+.search-container{
+    width: 80%;
+}
+  .user-list {
+    /* add any styles for the list container */
+    list-style: none;
+    padding:0;
+  }
+  
+  .user-list li {
+    /* add any styles for each list item */
+    display: flex;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  .user-list img {
+    /* add any styles for the profile photos */
+    border-radius: 50%; /* make the profile photos circular */
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+  
