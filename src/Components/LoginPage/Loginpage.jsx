@@ -1,45 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect } from 'react';
 import "./Loginpage.css"
 import { useNavigate } from 'react-router-dom'
-export const Loginpage = () => {
+import { Button } from 'antd';
 
-   const [username, setUsername] = useState('');
-   const [password, setPassword] = useState('');
-   const navigate = useNavigate();
+export const Loginpage = (props) => {
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    // Send a login request to the server with the username and password
-    // If login is successful, redirect the user to the dashboard
-    // If login fails, display an error message
-    navigate('/Home');
-  }
+  const 
+  {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    handleSignup,
+    handlelogin,
+    hasAccount,
+    sethasAccount,
+    EmailError,
+    passworderror}
+    =props;
 
   return (
-    <>
-    <form onSubmit={handleSubmit}>
-    <div className="logo-div">
-        <img className="logo" src="./logo192.png"  alt="React Image" />
+   <section className='login'>
+    <div className="loginContainer">
+      <label>Username</label>
+      <input type="text" autoFocus required value={email} onChange={(e)=>{
+        setEmail(e.target.value)
+      }}/>
+      <p className="errorMsg">{EmailError}</p>
+      <label>Password</label>
+      <input type="password" autoFocus required value={password} onChange={(e)=>{
+        setPassword(e.target.value)
+      }}/>
+      <p className="errorMsg">{passworderror}</p>
+      <div className="btnContainer">
+        {hasAccount?(
+          <>
+          <button onClick={handlelogin}>Sign in</button>
+          <p>Don't have a Account <span onClick={()=>sethasAccount(!hasAccount)}>Sign up</span></p>
+          </>
+        ):(
+          <>
+          <button onClick={handleSignup}>Sign up</button>
+          <p>Have an Account? <span onClick={()=>sethasAccount(!hasAccount)}>Sign in</span></p>
+          </>
+        )}
+      </div>
     </div>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={event => setUsername(event.target.value)} required />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input type="password" value={password} onChange={event => setPassword(event.target.value)} required />
-      </label>
-      <br />
-      <input type="submit" value="Login" />
-      
-      <button className="guest-button" onClick={() =>navigate('/User')}>
-       Guest User
-      </button>
-    </form>
-   
-    
-    </>
+   </section>
   )
 }
 

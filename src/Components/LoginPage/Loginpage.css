@@ -1,63 +1,122 @@
-/* Add some general styling to the page */
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Style the form container */
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
-    margin: 50px auto;
-    width: 300px;
-  }
-  /* Style the form container */
-.logo{
-    height: 50px;
-    
-}
-.logo-div{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-  /* Style the form inputs */
-  input[type="text"], input[type="password"] {
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  button {
+    border: none;
+    outline: none;
     width: 100%;
-  }
-  
-  /* Style the submit button */
-  input[type="submit"] {
-    background-color: #2b456a;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #603bbb;
     cursor: pointer;
   }
-  .guest-button{
-    background-color: #2b456a;
+  
+  .login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background: #e9e9e9;
+    display: flex;
+  }
+  
+  .login .loginContainer {
+    padding: 60px;
+    margin: auto;
+    width: 100%;
+    max-width: 520px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%
+    );
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+  }
+  
+  .login .loginContainer label {
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    margin: 14px 0;
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+  }
+  
+  .login .loginContainer input {
+    width: 100%;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    font-size: 19px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .login .loginContainer .btnContainer {
+    width: 100%;
+    padding: 24px 0;
+  }
+  
+  .login .loginContainer .btnContainer p {
+    margin: 14px 0 0 0;
+    text-align: right;
+    color: #fff;
+  }
+  
+  .login .loginContainer .btnContainer p span {
+    color: yellow;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
     cursor: pointer;
-  }
-  input[type="submit"]:hover {
-    background-color:#2b456a;
+    transition: all 400ms ease-in-out;
   }
   
-  /* Add some spacing between the form elements */
-  label {
-    margin-bottom: 10px;
+  .login .loginContainer .btnContainer p span:hover {
+    color: red;
   }
   
+  .login .loginContainer .errorMsg {
+    color: red;
+    font-size: 16px;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%
+    );
+  }
+  
+  .hero nav {
+    background: #603bbb;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero nav h2 {
+    color: #fff;
+  }
+  
+  .hero nav button {
+    width: 86px;
+    padding: 8px 0;
+    background: #3a2b58;
+  }
