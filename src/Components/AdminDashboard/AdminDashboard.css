@@ -1,6 +1,14 @@
 .btn-create-user{
     width: auto;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-right: 5px;
     margin-bottom: 10px;
+    height:50px;
+}
+.btn-logout-admin{
+    height:50px;
+    margin-top: 50px;
+    margin-right: 5px;
+    width: auto;
+   
 }

@@ -4,6 +4,7 @@ import fire from './fire';
 import { Loginpage } from './Components/LoginPage/Loginpage';
 import AdminDashboard from './Components/AdminDashboard/AdminDashboard';
 import UserPage from './Components/User/UserPage';
+import DashboardPanel from './Components/DashboardPanel/DashboardPanel';
 
 
 function App() {
@@ -84,7 +85,7 @@ useEffect(()=>{
     <>
    
       {user?(
-      <AdminDashboard/>):(
+      <UserPage handleLogout={handleLogout}/>):(
       <Loginpage 
       email={email} 
       setEmail={setEmail}

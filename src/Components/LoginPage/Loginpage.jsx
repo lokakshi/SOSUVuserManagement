@@ -22,12 +22,13 @@ export const Loginpage = (props) => {
   return (
    <section className='login'>
     <div className="loginContainer">
-      <label>Username</label>
+      {/* <img className="logo" src="./logo192.png" alt="SOSUV"/>    */}
+      <label>Username:</label>
       <input type="text" autoFocus required value={email} onChange={(e)=>{
         setEmail(e.target.value)
       }}/>
       <p className="errorMsg">{EmailError}</p>
-      <label>Password</label>
+      <label>Password:</label>
       <input type="password" autoFocus required value={password} onChange={(e)=>{
         setPassword(e.target.value)
       }}/>

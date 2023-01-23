@@ -5,10 +5,12 @@ import { Modal } from 'antd';
 import { Form, Input, Button, Upload, Table } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import fire from '../../fire';
+import LogoutIcon from '@mui/icons-material/Logout';
 import './AdminDashboard.css'
 
 
-const AdminDashboard = () => {
+const AdminDashboard = (props) => {
+  const {handleLogout} =props
   const [visible, setVisible] = useState(false);
   const [users, setUsers] = useState([]);
   const [form] = Form.useForm();
@@ -28,9 +30,9 @@ const AdminDashboard = () => {
 
   const handleOk = async () => {
     const values = await form.validateFields();
+    console.log(values);
     const db = fire.database();
-    // await db.ref('users').push(values);
-    await db.ref('users').push(values).catch(error => {
+    db.ref('users').push(values).catch(error => {
       console.log(error);
     });
     form.resetFields();
@@ -71,11 +73,12 @@ const AdminDashboard = () => {
 
   return (
     <>
-  
       
-      <Button type="primary" onClick={showModal} className='btn-create-user'>
+      <button className='btn-logout-admin' onClick={handleLogout}><LogoutIcon/></button>
+      
+      <button type="primary" onClick={showModal} className='btn-create-user'>
         <PlusOutlined /> Create User
-      </Button>
+      </button>
      
      
       <Modal
@@ -83,6 +86,7 @@ const AdminDashboard = () => {
         visible={visible}
         onOk={handleOk}
         onCancel={handleCancel}
+        
         
       >
         <Form form={form} className='user-form'>
